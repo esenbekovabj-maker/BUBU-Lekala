@@ -1,5 +1,7 @@
 import React from 'react';
-import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send } from 'lucide-react';
+import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send, Instagram } from 'lucide-react';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
 interface FooterProps {
   onNavClick: (href: string) => void;
@@ -70,11 +72,23 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 <Clock className="w-4 h-4 text-emerald-500 shrink-0" />
                 <span>Пн–Сб: 09:00 – 19:00</span>
               </div>
-              <div className="flex items-center gap-2.5">
+              <a
+                href="tel:+996559444996"
+                className="flex items-center gap-2.5 hover:text-white transition-colors"
+              >
                 <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
                 <span className="font-mono tabular-nums">+996 (559) 444-996</span>
-              </div>
-              <div className="pt-2">
+              </a>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 hover:text-white transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>@lekala_bubu_kg</span>
+              </a>
+              <div className="pt-2 flex flex-wrap items-center gap-2">
                 <a
                   href="https://wa.me/996559444996"
                   target="_blank"
@@ -83,6 +97,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 >
                   <Send className="w-3.5 h-3.5" />
                   <span>Написать в WhatsApp</span>
+                </a>
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram бюро BUBU"
+                  className="inline-flex items-center justify-center w-8 h-8 bg-stone-800 hover:bg-stone-700 text-white rounded-lg transition-colors"
+                >
+                  <Instagram className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -95,13 +118,24 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
             © {new Date().getFullYear()} Конструкторское бюро лекал «BUBU» (г. Бишкек, ул. Горького, 19). Разработка лекал одежды любой сложности.
           </div>
 
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-stone-400 hover:text-white transition-colors"
-          >
-            <span>Наверх</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex items-center gap-4">
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram бюро BUBU"
+              className="text-stone-400 hover:text-white transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-1.5 text-stone-400 hover:text-white transition-colors"
+            >
+              <span>Наверх</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>

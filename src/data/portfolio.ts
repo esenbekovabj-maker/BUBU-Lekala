@@ -3,6 +3,8 @@ import hoodieOversizeImg from '../assets/images/portfolio_hoodie_oversize_179206
 import trenchCoatImg from '../assets/images/portfolio_trench_coat_1792068930949.jpg';
 import activewearSetImg from '../assets/images/portfolio_activewear_set_1792068931369.jpg';
 import dressSlipImg from '../assets/images/portfolio_dress_slip_1792068931235.jpg';
+// Photo: Unsplash, photo-1789110854083 (Unsplash License)
+import palazzoTrousersImg from '../assets/images/portfolio_palazzo_trousers.jpg';
 
 export const PORTFOLIO_CATEGORIES = [
   { id: 'all', name: 'Все изделия' },
@@ -155,7 +157,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Широкие брюки палаццо с глубокими защипами',
     category: 'uniform',
     categoryLabel: 'Брюки & карго',
-    image: trenchCoatImg,
+    image: palazzoTrousersImg,
     baseSize: '44 (M)',
     gradingRange: '42 — 54 (7 размеров)',
     fabricType: 'Костюмная поливискоза с эластаном 290 г/м²',
