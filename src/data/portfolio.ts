@@ -1,4 +1,8 @@
 import { PortfolioItem } from '../types';
+import hoodieOversizeImg from '../assets/images/portfolio_hoodie_oversize_1792068929188.jpg';
+import trenchCoatImg from '../assets/images/portfolio_trench_coat_1792068930949.jpg';
+import activewearSetImg from '../assets/images/portfolio_activewear_set_1792068931369.jpg';
+import dressSlipImg from '../assets/images/portfolio_dress_slip_1792068931235.jpg';
 
 export const PORTFOLIO_CATEGORIES = [
   { id: 'all', name: 'Все изделия' },
@@ -15,7 +19,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Худи Oversize Boxy Fit с двойным капюшоном',
     category: 'knitwear',
     categoryLabel: 'Трикотаж & WB хиты',
-    image: '/src/assets/images/portfolio_hoodie_oversize_1792068929188.jpg',
+    image: hoodieOversizeImg,
     baseSize: '46 (M)',
     gradingRange: '42 — 56 (8 размеров)',
     fabricType: 'Футер 3-нитка пенье 380–420 г/м² + кашкорсе',
@@ -50,7 +54,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Двубортный тренч прямого силуэта с кокеткой',
     category: 'outerwear',
     categoryLabel: 'Верхняя одежда',
-    image: '/src/assets/images/portfolio_trench_coat_1792068930949.jpg',
+    image: trenchCoatImg,
     baseSize: '44 (S-M)',
     gradingRange: '42 — 52 (6 размеров)',
     fabricType: 'Хлопковый твил водоотталкивающий 280 г/м²',
@@ -85,7 +89,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Комплект Seamless-Fit: рашгард и велосипедки с пушап-эффектом',
     category: 'sport',
     categoryLabel: 'Activewear и спорт',
-    image: '/src/assets/images/portfolio_activewear_set_1792068931369.jpg',
+    image: activewearSetImg,
     baseSize: '42 (S)',
     gradingRange: '40 — 50 (6 размеров)',
     fabricType: 'Бифлекс матовый компрессионный 260 г/м²',
@@ -118,7 +122,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Платье-комбинация миди по косой с качелями',
     category: 'suits_dresses',
     categoryLabel: 'Платья и костюмы',
-    image: '/src/assets/images/portfolio_dress_slip_1792068931235.jpg',
+    image: dressSlipImg,
     baseSize: '44 (M)',
     gradingRange: '40 — 50 (6 размеров)',
     fabricType: 'Искусственный шёлк сатин / креп 160 г/м²',
@@ -151,7 +155,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Широкие брюки палаццо с глубокими защипами',
     category: 'uniform',
     categoryLabel: 'Брюки & карго',
-    image: '/src/assets/images/portfolio_trench_coat_1792068930949.jpg',
+    image: trenchCoatImg,
     baseSize: '44 (M)',
     gradingRange: '42 — 54 (7 размеров)',
     fabricType: 'Костюмная поливискоза с эластаном 290 г/м²',
@@ -184,7 +188,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     title: 'Утепленный бомбер оверсайз со спущенным плечом',
     category: 'outerwear',
     categoryLabel: 'Верхняя одежда',
-    image: '/src/assets/images/portfolio_hoodie_oversize_1792068929188.jpg',
+    image: hoodieOversizeImg,
     baseSize: '46 (L)',
     gradingRange: '44 — 56 (7 размеров)',
     fabricType: 'Мембранная плащевка / шерстяной драп + альполюкс 100',

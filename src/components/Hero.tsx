@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Cpu, Ruler, Printer } from 'lucide-react';
+import heroImg from '../assets/images/hero_pattern_cad_studio_1792068929191.jpg';
 
 interface HeroProps {
   onOrderClick: () => void;
@@ -74,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onOrderClick, onCalculateClick }) =>
           <div className="lg:col-span-5 relative flex items-stretch">
             <div className="w-full relative rounded-2xl overflow-hidden border border-stone-300/80 shadow-xl bg-stone-900">
               <img
-                src="/src/assets/images/hero_pattern_cad_studio_1792068929191.jpg"
+                src={heroImg}
                 alt="Конструкторское бюро лекал в Бишкеке — разработка в САПР Grafis и Clo 3D"
                 className="w-full h-full object-cover min-h-[380px] lg:min-h-full"
                 loading="eager"
