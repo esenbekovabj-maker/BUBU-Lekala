@@ -5,8 +5,8 @@ const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
 // Bureau building from the owner's 2GIS pin: ул. Анкара, 297 / ул. Мукая Элебаева, 63.
 // Google geocodes "Горького, 19" to the neighbouring building, so the map uses these coordinates.
-const MAP_EMBED_URL = 'https://maps.google.com/maps?q=42.85706,74.612638&z=18&hl=ru&output=embed';
-const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612638,42.85706';
+const MAP_EMBED_URL = 'https://maps.google.com/maps?q=42.857182,74.612648&z=18&hl=ru&output=embed';
+const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612648,42.857182';
 
 interface FooterProps {
   onNavClick: (href: string) => void;
