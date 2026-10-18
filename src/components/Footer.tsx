@@ -3,10 +3,10 @@ import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send, Instagram } from 'l
 
 const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
-// Bureau location from the owner's 2GIS pin (ул. Анкара, 297 / ул. Мукая Элебаева, 63)
-const MAP_COORDS = '42.85706,74.612638';
-const MAP_EMBED_URL = `https://maps.google.com/maps?q=${MAP_COORDS}&z=17&hl=ru&output=embed`;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${MAP_COORDS}`;
+// Bureau location from the owner's map links: Google "19 ул. Горького, Бишкек 720005",
+// 2GIS building ул. Анкара, 297 / ул. Мукая Элебаева, 63 (same corner)
+const MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent('19 ул. Горького, Бишкек 720005')}&z=17&hl=ru&output=embed`;
+const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/fMB4StwjtFeAJYHq8';
 const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612638,42.85706';
 
 interface FooterProps {
