@@ -38,7 +38,7 @@ export const OrderForm: React.FC<OrderFormProps> = ({
     materialStatus: 'Есть фото из карточки маркетплейса',
     baseSize: '46',
     gradingSizes: ['42', '44', '46', '48', '50'],
-    heights: ['164-170'],
+    heights: ['164-170 см (база)'],
     fabricType: 'Футер 3-нитка пенье 380–420 г/м²',
     shrinkageTested: true,
     shrinkagePercent: '3.5% по длине, 1.5% по ширине',
@@ -310,7 +310,11 @@ ${formData.comments ? `- Примечания: ${formData.comments}` : ''}`;
                     onChange={(e) => setFormData({ ...formData, garmentCategory: e.target.value })}
                     className="w-full px-3.5 py-2.5 bg-white border border-stone-300 rounded-xl text-xs sm:text-sm text-stone-900 focus:outline-hidden focus:border-stone-900"
                   >
-                    {categories.map((cat, idx) => (
+                    {/* Keep a model chosen from the portfolio / price list selectable */}
+                    {(categories.includes(formData.garmentCategory)
+                      ? categories
+                      : [formData.garmentCategory, ...categories]
+                    ).map((cat, idx) => (
                       <option key={idx} value={cat}>
                         {cat}
                       </option>
@@ -452,7 +456,7 @@ ${formData.comments ? `- Примечания: ${formData.comments}` : ''}`;
                     Ростовка
                   </label>
                   <select
-                    value={formData.heights[0] || '164-170 см'}
+                    value={formData.heights[0] || '164-170 см (база)'}
                     onChange={(e) => setFormData({ ...formData, heights: [e.target.value] })}
                     className="w-full px-3.5 py-2.5 bg-white border border-stone-300 rounded-xl text-xs sm:text-sm text-stone-900 focus:outline-hidden focus:border-stone-900"
                   >

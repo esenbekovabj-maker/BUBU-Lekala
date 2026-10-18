@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, PhoneCall } from 'lucide-react';
+import { Menu, X, PhoneCall, Instagram } from 'lucide-react';
 
 interface HeaderProps {
   onOrderClick: () => void;
@@ -18,10 +18,14 @@ export const Header: React.FC<HeaderProps> = ({ onOrderClick }) => {
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    // Wait for the mobile drawer to collapse, otherwise the scroll target is
+    // computed with the drawer still open and overshoots by its height.
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 50);
   };
 
   return (
@@ -103,10 +107,19 @@ export const Header: React.FC<HeaderProps> = ({ onOrderClick }) => {
               <PhoneCall className="w-4 h-4 text-emerald-600" />
               <span>WhatsApp: +996 (559) 444-996</span>
             </a>
+            <a
+              href="https://www.instagram.com/lekala_bubu_kg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2 px-3 text-sm text-stone-600 hover:bg-stone-50 rounded-lg flex items-center gap-2"
+            >
+              <Instagram className="w-4 h-4 text-emerald-600" />
+              <span>Instagram: @lekala_bubu_kg</span>
+            </a>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                onOrderClick();
+                setTimeout(onOrderClick, 50);
               }}
               className="w-full py-2.5 bg-stone-900 text-white text-xs font-semibold rounded-lg shadow-sm"
             >
