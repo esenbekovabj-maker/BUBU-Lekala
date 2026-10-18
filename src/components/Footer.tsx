@@ -3,10 +3,11 @@ import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send, Instagram } from 'l
 
 const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
-const ADDRESS_QUERY = encodeURIComponent('Бишкек, улица Горького, 19');
-const MAP_EMBED_URL = `https://maps.google.com/maps?q=${ADDRESS_QUERY}&z=17&hl=ru&output=embed`;
-const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS_QUERY}`;
-const TWO_GIS_URL = `https://2gis.kg/bishkek/search/${ADDRESS_QUERY}`;
+// Bureau location from the owner's 2GIS pin (ул. Анкара, 297 / ул. Мукая Элебаева, 63)
+const MAP_COORDS = '42.85706,74.612638';
+const MAP_EMBED_URL = `https://maps.google.com/maps?q=${MAP_COORDS}&z=17&hl=ru&output=embed`;
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${MAP_COORDS}`;
+const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612638,42.85706';
 
 interface FooterProps {
   onNavClick: (href: string) => void;
