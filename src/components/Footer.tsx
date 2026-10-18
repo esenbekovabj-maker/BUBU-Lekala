@@ -3,10 +3,9 @@ import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send, Instagram } from 'l
 
 const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
-// Bureau location from the owner's map links: Google "19 ул. Горького, Бишкек 720005",
-// 2GIS building ул. Анкара, 297 / ул. Мукая Элебаева, 63 (same corner)
-const MAP_EMBED_URL = `https://maps.google.com/maps?q=${encodeURIComponent('19 ул. Горького, Бишкек 720005')}&z=17&hl=ru&output=embed`;
-const GOOGLE_MAPS_URL = 'https://maps.app.goo.gl/fMB4StwjtFeAJYHq8';
+// Bureau building from the owner's 2GIS pin: ул. Анкара, 297 / ул. Мукая Элебаева, 63.
+// Google geocodes "Горького, 19" to the neighbouring building, so the map uses these coordinates.
+const MAP_EMBED_URL = 'https://maps.google.com/maps?q=42.85706,74.612638&z=18&hl=ru&output=embed';
 const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612638,42.85706';
 
 interface FooterProps {
@@ -131,15 +130,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
               </div>
             </div>
             <div className="flex flex-wrap gap-2 text-xs">
-              <a
-                href={GOOGLE_MAPS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-lg transition-colors"
-              >
-                <MapPin className="w-3.5 h-3.5" />
-                <span>Открыть в Google Картах</span>
-              </a>
               <a
                 href={TWO_GIS_URL}
                 target="_blank"
