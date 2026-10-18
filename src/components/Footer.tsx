@@ -3,6 +3,11 @@ import { Phone, MapPin, Clock, MessageSquare, ArrowUp, Send, Instagram } from 'l
 
 const INSTAGRAM_URL = 'https://www.instagram.com/lekala_bubu_kg/';
 
+// Bureau building from the owner's 2GIS pin: ул. Анкара, 297 / ул. Мукая Элебаева, 63.
+// Google geocodes "Горького, 19" to the neighbouring building, so the map uses these coordinates.
+const MAP_EMBED_URL = 'https://maps.google.com/maps?q=42.857182,74.612648&z=18&hl=ru&output=embed';
+const TWO_GIS_URL = 'https://2gis.kg/bishkek/geo/15763234351052058/74.612648,42.857182';
+
 interface FooterProps {
   onNavClick: (href: string) => void;
 }
@@ -109,6 +114,42 @@ export const Footer: React.FC<FooterProps> = ({ onNavClick }) => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Location Map */}
+        <div className="py-10 border-b border-stone-800">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-5">
+            <div>
+              <div className="text-xs font-mono uppercase text-emerald-400 font-semibold tracking-wider">
+                Как нас найти
+              </div>
+              <div className="flex items-center gap-2 mt-2 text-sm text-white font-semibold">
+                <MapPin className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>г. Бишкек, ул. Горького, 19</span>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2 text-xs">
+              <a
+                href={TWO_GIS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-stone-800 hover:bg-stone-700 text-white font-medium rounded-lg transition-colors"
+              >
+                <MapPin className="w-3.5 h-3.5" />
+                <span>Открыть в 2GIS</span>
+              </a>
+            </div>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-stone-800 bg-stone-800 aspect-4/3 sm:aspect-21/9">
+            <iframe
+              src={MAP_EMBED_URL}
+              title="Карта: г. Бишкек, ул. Горького, 19"
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
           </div>
         </div>
 
